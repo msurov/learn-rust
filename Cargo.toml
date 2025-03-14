@@ -10,8 +10,12 @@ num = "0.4"
 lending-iterator = "*"
 
 [[bin]]
-name = "csv_reader_tests"
-path = "src/csv_reader_tests.rs"
+name = "read_quats_from_csv"
+path = "src/read_quats_from_csv.rs"
+
+[[bin]]
+name = "sample"
+path = "src/sample.rs"
 
 [profile.release]
 strip = "symbols"

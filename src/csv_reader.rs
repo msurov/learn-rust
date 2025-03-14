@@ -46,7 +46,7 @@ impl CSVReader {
     }
   }
 
-  pub fn take(&mut self) -> Option<&Vec<f64>> {
+  pub fn take(&mut self) -> Option<&[f64]> {
     self.temp_buf.clear();
     match self.buf_reader.read_line(&mut self.temp_buf) {
       Err(e) => {
