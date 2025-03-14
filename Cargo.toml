@@ -1,0 +1,24 @@
+[package]
+name = "learn-rust" # the name of the package
+version = "0.1.0"    # the current version, obeying semver
+authors = ["Maksim Surov <surov.m.o@gmail.com>"]
+edition = "2024"
+
+[dependencies]
+nalgebra = "*"
+num = "0.4"
+lending-iterator = "*"
+
+[[bin]]
+name = "csv_reader_tests"
+path = "src/csv_reader_tests.rs"
+
+[profile.release]
+strip = "symbols"
+opt-level = "s"
+codegen-units = 1
+
+[profile.dev]
+strip = "none"
+debug-assertions = true
+opt-level = 0
