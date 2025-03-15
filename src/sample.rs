@@ -1,7 +1,8 @@
-use std::time::{Duration, Instant};
+use std::{fs, time::{Duration, Instant}};
 
 fn main() {
-  let t1 = Instant::now();
-  let t2 = Instant::now();
-  println!("{:?}", t2 - t1);
+  let dir = fs::read_dir("/").unwrap();
+  for e in dir {
+    println!("{}", e.unwrap().path().display());
+  }
 }
