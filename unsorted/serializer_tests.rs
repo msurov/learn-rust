@@ -1,3 +1,4 @@
+// https://serde.rs/deserialize-struct.html
 
 use serde_json;
 use serde_binary;
